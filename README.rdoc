@@ -1,0 +1,14 @@
+* requires the ruby implementation gem 'net-ldap'
+ 
+
+Gemfile
+---
+gem "oa-ldap", :require => 'omniauth/ldap'
+
+
+Rack middleware
+---
+config.middleware.use OmniAuth::Builder do
+      provider :LDAP, :local-ldap, "localhost", 10389, "ou=system", :identifier_key => "uid", :username => "uid=admin,ou=system", :password => "secret"
+end
+
