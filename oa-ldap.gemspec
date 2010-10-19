@@ -13,4 +13,5 @@ Gem::Specification.new do |gem|
   
   gem.add_dependency 'oa-core',  '>= 0.0.3'
   gem.add_dependency 'net-ldap', '>= 0.1.1'
+  gem.add_dependency 'jruby-ldap', '>= 0.0.1'
 end
